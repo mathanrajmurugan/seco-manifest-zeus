@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <include name="imx-5.4.70-2.3.0.xml"/>
+
+  <remote fetch="https://git.seco.com/arm/nxp/imx/develop/yocto/5.x/" name="seco-distro-dev"/>
+  <remote fetch="ssh://git@git.seco.com/edge/yocto/seco-layers/" name="seco-bsp-dev"/>
+
+  <!-- Distro Layer -->
+  <project remote="seco-distro-dev" revision="develop" name="meta-seco-distro" path="sources/meta-seco-distro">
+  </project>
+
+  <!-- BSP Layer -->
+  <project remote="seco-bsp-dev" revision="develop" name="meta-seco-imx" path="sources/meta-seco-imx">
+  <linkfile src="tools/seco-setup.sh" dest="seco-setup-dev.sh"/>
+  </project>
+
+  <!-- Docker support -->
+  <project remote="yocto" name="meta-virtualization" path="sources/meta-virtualization" revision="bda5b6ab326a4926aedd32f137de5f3837c8cdb8"/>
+
+  <!-- Java support -->
+  <project remote="yocto" name="meta-java" path="sources/meta-java" revision="d0a9fe08be6e1c2e7f7afc79abc292d3bffeb9fe"/>
+
+</manifest>
+
