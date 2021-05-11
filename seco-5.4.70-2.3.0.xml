@@ -4,7 +4,7 @@
   <include name="imx-5.4.70-2.3.0.xml"/>
 
   <remote fetch="https://git.seco.com/arm/nxp/imx/develop/yocto/5.x/" name="seco-distro-dev"/>
-  <remote fetch="ssh://git@git.seco.com/edge/yocto/seco-layers/" name="seco-bsp-dev"/>
+  <remote fetch="https://git.seco.com/edge/yocto/seco-layers/" name="seco-bsp-dev"/>
 
   <!-- Distro Layer -->
   <project remote="seco-distro-dev" revision="develop" name="meta-seco-distro" path="sources/meta-seco-distro">
